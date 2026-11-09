@@ -1,4 +1,4 @@
-print(" DATA PASIEN RAWAT INAP ")
+print(" DATA PASIEN RUMAH SAKIT ")
 
 penyakit = {
     "1": ("Demam Berdarah", "Penyakit Infeksi", "3-7 hari"),
@@ -24,11 +24,17 @@ pilihan = input("Masukkan nomor penyakit: ")
 if pilihan in penyakit:
     data = penyakit[pilihan]
 
+    kategori = data[1]
+    opname = data[2]
+
+    status = "Terdaftar" if pilihan in penyakit else "Tidak Terdaftar"
+
     print("\n HASIL DATA PASIEN ")
     print("Nama:", nama)
     print("Penyakit:", data[0])
-    print("Kategori:", data[1])
-    print("Perkiraan Lama Opname:", data[2])
+    print("Kategori:", kategori)
+    print("Perkiraan Lama Opname:", opname)
+    print("Status:", status)
 
 else:
     print("Penyakit tidak tersedia!")
